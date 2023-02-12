@@ -28,6 +28,8 @@ def rock_paper_scissors():
         easygui.msgbox(msg="Ничья")
     elif user_choice == n and computer_choice == k:
         easygui.msgbox(msg="Вы проиграли")
+    elif user_choice == n and computer_choice == b:
+        easygui.msgbox(msg="Вы выиграли")
 
         easygui.msgbox(msg="Вы выйграли")
     print(user_choice, computer_choice)
