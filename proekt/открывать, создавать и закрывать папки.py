@@ -15,7 +15,7 @@ x = input()
 f.write(x)
 f.close()
 
-#os.mkdir(r"c:\Users\danil\desktop\file.txt")
+# os.mkdir(r"c:\Users\danil\desktop\file.txt")
 os.remove(r"c:\Users\danil\desktop\dirtest\file.txt")
 os.rmdir(r"c:\Users\danil\desktop\dirtest")
 os.mkdir(r"c:\Users\danil\desktop\dirtest")
