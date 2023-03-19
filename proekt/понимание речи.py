@@ -1,23 +1,23 @@
-import pyttsx3
+# import pyttsx3
 import json, pyaudio
 import vosk
 from vosk import Model, KaldiRecognizer
 
-model = Model(r"C:\Users\danil\PycharmProjects\pythondfg\proekt\vosk-model-ru-0.10")
+model = Model(r"C:\Users\movavi_school\PycharmProjects\pythondfs\proekt\vosk-model-ru-0.10")
 rec = KaldiRecognizer(model, 16000)
 p = pyaudio.PyAudio()
 stream = p.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=8000)
 stream.start_stream()
 
 # настройки голоса
-engine = pyttsx3.init()
-volume = engine.getProperty('volume')
-engine.setProperty('volume', volume+0.50)
-rate = engine.getProperty('rate')
-engine.setProperty('rate', rate-90)
-engine.say("Hallo world")
-voices = engine.getProperty('voices')
-engine.setProperty('', voices[0].id)
+# engine = pyttsx3.init()
+# volume = engine.getProperty('volume')
+# engine.setProperty('volume', volume+0.50)
+# rate = engine.getProperty('rate')
+# engine.setProperty('rate', rate-90)
+# engine.say("Hallo world")
+# voices = engine.getProperty('voices')
+# engine.setProperty('', voices[0].id)
 
 
 
@@ -33,9 +33,9 @@ def listen():
 
 for text in listen():
     print(text)
-    engine.save_to_file(text)
+    # engine.save_to_file(text)
     if text == "пока":
         quit()
     elif text == "привет":
         print("Приветствую, хозяин")
-engine.runAndWait()
+# engine.runAndWait()
